@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nakamurahikari/market_api/infrastructure/Infrastructure.csproj": {}
+    "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\infrastructure\\infrastructure.csproj": {}
   },
   "projects": {
-    "/Users/nakamurahikari/market_api/application/application.csproj": {
+    "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\application\\application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nakamurahikari/market_api/application/application.csproj",
+        "projectUniqueName": "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\application\\application.csproj",
         "projectName": "application",
-        "projectPath": "/Users/nakamurahikari/market_api/application/application.csproj",
-        "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
-        "outputPath": "/Users/nakamurahikari/market_api/application/obj/",
+        "projectPath": "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\application\\application.csproj",
+        "packagesPath": "C:\\Users\\HikariNakamura\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\HikariNakamura\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/nakamurahikari/market_api/domain/domain.csproj": {
-                "projectPath": "/Users/nakamurahikari/market_api/domain/domain.csproj"
+              "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\domain\\domain.csproj": {
+                "projectPath": "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\domain\\domain.csproj"
               }
             }
           }
@@ -36,7 +42,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -91,26 +103,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.125/libexec/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/nakamurahikari/market_api/domain/domain.csproj": {
+    "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\domain\\domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nakamurahikari/market_api/domain/domain.csproj",
+        "projectUniqueName": "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\domain\\domain.csproj",
         "projectName": "domain",
-        "projectPath": "/Users/nakamurahikari/market_api/domain/domain.csproj",
-        "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
-        "outputPath": "/Users/nakamurahikari/market_api/domain/obj/",
+        "projectPath": "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\domain\\domain.csproj",
+        "packagesPath": "C:\\Users\\HikariNakamura\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\HikariNakamura\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -123,7 +141,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -154,37 +178,43 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.125/libexec/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/nakamurahikari/market_api/infrastructure/Infrastructure.csproj": {
+    "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\infrastructure\\infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nakamurahikari/market_api/infrastructure/Infrastructure.csproj",
-        "projectName": "Infrastructure",
-        "projectPath": "/Users/nakamurahikari/market_api/infrastructure/Infrastructure.csproj",
-        "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
-        "outputPath": "/Users/nakamurahikari/market_api/infrastructure/obj/",
+        "projectUniqueName": "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\infrastructure\\infrastructure.csproj",
+        "projectName": "infrastructure",
+        "projectPath": "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\infrastructure\\infrastructure.csproj",
+        "packagesPath": "C:\\Users\\HikariNakamura\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\HikariNakamura\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/nakamurahikari/market_api/application/application.csproj": {
-                "projectPath": "/Users/nakamurahikari/market_api/application/application.csproj"
+              "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\application\\application.csproj": {
+                "projectPath": "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\application\\application.csproj"
               },
-              "/Users/nakamurahikari/market_api/domain/domain.csproj": {
-                "projectPath": "/Users/nakamurahikari/market_api/domain/domain.csproj"
+              "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\domain\\domain.csproj": {
+                "projectPath": "C:\\Users\\HikariNakamura\\source\\repos\\market_api\\domain\\domain.csproj"
               }
             }
           }
@@ -193,7 +223,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -232,7 +268,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.125/libexec/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
