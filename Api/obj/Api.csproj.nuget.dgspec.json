@@ -1,0 +1,323 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/nakamurahikari/market_api/api/Api.csproj": {}
+  },
+  "projects": {
+    "/Users/nakamurahikari/market_api/api/Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nakamurahikari/market_api/api/Api.csproj",
+        "projectName": "Api",
+        "projectPath": "/Users/nakamurahikari/market_api/api/Api.csproj",
+        "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
+        "outputPath": "/Users/nakamurahikari/market_api/api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj": {
+                "projectPath": "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "microsoft.aspnetcore.authentication.jwtbearer": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "npgsql.entityframeworkcore.postgresql": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "serilog.aspnetcore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "serilog.sinks.console": {
+              "target": "Package",
+              "version": "[6.0.1-deev-00953, )"
+            },
+            "serilog.sinks.file": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "swashbuckle.aspnetcore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.125/libexec/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nakamurahikari/market_api/application/application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nakamurahikari/market_api/application/application.csproj",
+        "projectName": "application",
+        "projectPath": "/Users/nakamurahikari/market_api/application/application.csproj",
+        "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
+        "outputPath": "/Users/nakamurahikari/market_api/application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/nakamurahikari/market_api/domain/domain.csproj": {
+                "projectPath": "/Users/nakamurahikari/market_api/domain/domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "microsoft.entityframeworkcore": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            },
+            "microsoft.extensions.caching.memory": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "microsoft.extensions.configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "microsoft.extensions.configuration.binder": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "newtonsoft.json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
+            },
+            "npgsql.entityframeworkcore.postgresql": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "serilog": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "system.identitymodel.tokens.jwt": {
+              "target": "Package",
+              "version": "[8.15.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.125/libexec/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nakamurahikari/market_api/domain/domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nakamurahikari/market_api/domain/domain.csproj",
+        "projectName": "domain",
+        "projectPath": "/Users/nakamurahikari/market_api/domain/domain.csproj",
+        "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
+        "outputPath": "/Users/nakamurahikari/market_api/domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "newtonsoft.json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
+            },
+            "npgsql.entityframeworkcore.postgresql": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.125/libexec/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj",
+        "projectName": "infrastructure",
+        "projectPath": "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj",
+        "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
+        "outputPath": "/Users/nakamurahikari/market_api/infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/nakamurahikari/market_api/application/application.csproj": {
+                "projectPath": "/Users/nakamurahikari/market_api/application/application.csproj"
+              },
+              "/Users/nakamurahikari/market_api/domain/domain.csproj": {
+                "projectPath": "/Users/nakamurahikari/market_api/domain/domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "epplus": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            },
+            "mailkit": {
+              "target": "Package",
+              "version": "[4.14.1, )"
+            },
+            "microsoft.entityframeworkcore": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            },
+            "npgsql.entityframeworkcore.postgresql": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.125/libexec/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\infrastructure\infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.aspnetcore.authentication.jwtbearer" Version="8.0.22" />
+    <PackageReference Include="npgsql.entityframeworkcore.postgresql" Version="8.0.11" />
+    <PackageReference Include="serilog.aspnetcore" Version="8.0.3" />
+    <PackageReference Include="serilog.sinks.console" Version="6.0.1-deev-00953" />
+    <PackageReference Include="serilog.sinks.file" Version="7.0.0" />
+    <PackageReference Include="swashbuckle.aspnetcore" Version="6.4.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
