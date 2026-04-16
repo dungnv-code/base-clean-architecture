@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nakamurahikari/market_api/Infrastructure/Infrastructure.csproj": {}
+    "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj": {}
   },
   "projects": {
     "/Users/nakamurahikari/market_api/application/application.csproj": {
@@ -158,14 +158,14 @@
         }
       }
     },
-    "/Users/nakamurahikari/market_api/Infrastructure/Infrastructure.csproj": {
+    "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nakamurahikari/market_api/Infrastructure/Infrastructure.csproj",
-        "projectName": "Infrastructure",
-        "projectPath": "/Users/nakamurahikari/market_api/Infrastructure/Infrastructure.csproj",
+        "projectUniqueName": "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj",
+        "projectName": "infrastructure",
+        "projectPath": "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj",
         "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
-        "outputPath": "/Users/nakamurahikari/market_api/Infrastructure/obj/",
+        "outputPath": "/Users/nakamurahikari/market_api/infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"
@@ -199,6 +199,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.14.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.20, )"

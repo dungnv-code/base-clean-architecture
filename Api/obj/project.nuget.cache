@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "Bqq//UXdLhtCPDuimlMkQa2ZNRB9BtVq5O3f3QevrG9pKuZPZowfURwi2zIzsNxw2JBsiKp16FHOmkJ8nS4fXw==",
+  "dgSpecHash": "X17hqNb0xo6mafuApvXINEnGDYmnSKWjIzc5A57Nd9bcon4X0yy7NA+3YfVQD8Q9IPbTvOWZMc160a3jxEYeJA==",
   "success": true,
   "projectFilePath": "/Users/nakamurahikari/market_api/Api/Api.csproj",
   "expectedPackageFiles": [
     "/Users/nakamurahikari/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/nakamurahikari/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",
     "/Users/nakamurahikari/.nuget/packages/bouncycastle.cryptography/2.6.1/bouncycastle.cryptography.2.6.1.nupkg.sha512",
+    "/Users/nakamurahikari/.nuget/packages/confluent.kafka/2.14.0/confluent.kafka.2.14.0.nupkg.sha512",
     "/Users/nakamurahikari/.nuget/packages/epplus/8.2.1/epplus.8.2.1.nupkg.sha512",
     "/Users/nakamurahikari/.nuget/packages/epplus.interfaces/8.1.0/epplus.interfaces.8.1.0.nupkg.sha512",
     "/Users/nakamurahikari/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/nakamurahikari/.nuget/packages/librdkafka.redist/2.14.0/librdkafka.redist.2.14.0.nupkg.sha512",
     "/Users/nakamurahikari/.nuget/packages/mailkit/4.14.1/mailkit.4.14.1.nupkg.sha512",
     "/Users/nakamurahikari/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.22/microsoft.aspnetcore.authentication.jwtbearer.8.0.22.nupkg.sha512",
     "/Users/nakamurahikari/.nuget/packages/microsoft.aspnetcore.openapi/8.0.24/microsoft.aspnetcore.openapi.8.0.24.nupkg.sha512",

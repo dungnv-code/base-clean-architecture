@@ -1,8 +1,12 @@
+#nullable disable
+
+using Application;
+using Application.DTOs.Kafka;
+using Infrastructure.ExternalServices.Kafka;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore.SqlServer;
 
 namespace Infrastructure;
 
@@ -16,6 +20,9 @@ public static class DependencyInjection
             options.UseSqlServer(
                 configuration.GetConnectionString("DefaultConnection"),
                 b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)));
+
+        services.AddSingleton<AppSettings>();
+        services.AddSingleton<IProducerHandler<AuditLogDTO>, AuditLogProducerHandler>();
 
         return services;
     }
