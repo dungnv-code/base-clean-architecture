@@ -3,7 +3,7 @@ stages:
   - deploy
 
 variables:
-  DOCKER_IMAGE: "market-app-api"
+  DOCKER_IMAGE: "cmcdtqg-admin-api"
 
 workflow:
   rules:
