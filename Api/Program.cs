@@ -8,12 +8,14 @@ builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Health check cho Render (và các load balancer khác)
+app.MapGet("/health", () => Results.Ok(new { status = "healthy" }));
 
 app.UseHttpsRedirection();
 

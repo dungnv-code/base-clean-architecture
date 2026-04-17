@@ -59,11 +59,11 @@ deploy:
     - docker:24-dind
   variables:
     DOCKER_TLS_CERTDIR: "/certs"
-    # fetch để docker-compose.yml luôn có trong workspace
-    GIT_STRATEGY: fetch
+    GIT_STRATEGY: none
   script:
     - echo "Deploying $ENV_NAME"
-    - docker compose -p ${DOCKER_IMAGE}_${ENV_NAME} up -d --remove-orphans
+    # - docker compose pull || true
+    - docker compose -p ${DOCKER_IMAGE}_${ENV_NAME} up -d --build --remove-orphans
   environment:
     name: $ENV_NAME
   tags:
