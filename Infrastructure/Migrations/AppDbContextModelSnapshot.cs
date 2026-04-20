@@ -22,6 +22,47 @@ namespace Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Domain.Entities.ChiTietHoaDon", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("DonGia")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("GhiChu")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<Guid?>("HoaDonId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("LoaiPhiId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("SoLuong")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("TenKhoanPhi")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<decimal>("ThanhTien")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ChiTietHoaDon", (string)null);
+                });
+
             modelBuilder.Entity("Domain.Entities.Cho", b =>
                 {
                     b.Property<Guid>("Id")
@@ -33,13 +74,11 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("DiaChi")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Ten")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -58,6 +97,20 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("GhiChu")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<Guid?>("HopDongId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("MaHoaDon")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("NgayDaoHan")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("NgayPhatHanh")
                         .HasColumnType("datetime2");
 
@@ -66,7 +119,8 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("TrangThai")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -85,14 +139,24 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("GhiChu")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
                     b.Property<decimal>("GiaThue")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<Guid?>("KiotId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("NgayBatDau")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("NgayKetThuc")
                         .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("ThuongNhanId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("TienCoc")
                         .HasColumnType("decimal(18,2)");
@@ -114,6 +178,9 @@ namespace Infrastructure.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("ChoId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
@@ -153,24 +220,175 @@ namespace Infrastructure.Migrations
                     b.Property<decimal>("DienTich")
                         .HasColumnType("decimal(10,2)");
 
+                    b.Property<Guid?>("KhuVucId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("LoaiKinhDoanh")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("MaKiot")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("TrangThai")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ViTri2D")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("ViTri3D")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Kiot", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.LichKiemTra", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("GhiChu")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<string>("KetQua")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<Guid?>("KhuVucId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LoaiKiemTra")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("NgayKiemTra")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("NguoiPhuTrachId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("TieuDe")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("TrangThai")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Kiot", (string)null);
+                    b.ToTable("LichKiemTra", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.LichSuKiot", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("GhiChu")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<Guid?>("HopDongCuId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("HopDongMoiId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("KiotId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LoaiBienDong")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("LyDo")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<DateTime>("NgayBanGiao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("ThuongNhanCuId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("ThuongNhanMoiId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LichSuKiot", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.LoaiPhi", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DonViTinh")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<decimal>("GiaMacDinh")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("MaPhi")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("MoTa")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("TenPhi")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LoaiPhi", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.NguoiDung", b =>
@@ -183,7 +401,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
@@ -228,6 +445,13 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("KetQuaXuLy")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<Guid?>("KiotId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("MoTa")
                         .IsRequired()
                         .HasMaxLength(2000)
@@ -237,6 +461,18 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("NgayXuLy")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("NguoiBaoCaoId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("NguoiXuLyId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("TaiSanId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("TrangThai")
                         .IsRequired()
@@ -263,19 +499,42 @@ namespace Infrastructure.Migrations
                     b.Property<decimal>("GiaTri")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<Guid?>("KhuVucId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("KiotId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Loai")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("NgayBaoHanh")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("NgayMua")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("QRCode")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Ten")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("TrangThai")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ViTri")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.HasKey("Id");
 
@@ -291,19 +550,32 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("GhiChu")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<Guid?>("HoaDonId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("MaGiaoDich")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
                     b.Property<DateTime>("NgayThanhToan")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PhuongThuc")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<decimal>("SoTien")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("TrangThai")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -321,30 +593,25 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("CCCD")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DiaChi")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("GiayPhepKinhDoanh")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SoDienThoai")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Ten")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");

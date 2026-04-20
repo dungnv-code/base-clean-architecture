@@ -17,6 +17,10 @@ public class AppDbContext : DbContext
     public DbSet<TaiSan> TaiSan { get; set; }
     public DbSet<SuCo> SuCo { get; set; }
     public DbSet<NguoiDung> NguoiDung { get; set; }
+    public DbSet<LichSuKiot> LichSuKiot { get; set; }
+    public DbSet<ChiTietHoaDon> ChiTietHoaDon { get; set; }
+    public DbSet<LoaiPhi> LoaiPhi { get; set; }
+    public DbSet<LichKiemTra> LichKiemTra { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -32,6 +36,10 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<TaiSan>().ToTable("TaiSan");
         modelBuilder.Entity<SuCo>().ToTable("SuCo");
         modelBuilder.Entity<NguoiDung>().ToTable("NguoiDung");
+        modelBuilder.Entity<LichSuKiot>().ToTable("LichSuKiot");
+        modelBuilder.Entity<ChiTietHoaDon>().ToTable("ChiTietHoaDon");
+        modelBuilder.Entity<LoaiPhi>().ToTable("LoaiPhi");
+        modelBuilder.Entity<LichKiemTra>().ToTable("LichKiemTra");
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
     }

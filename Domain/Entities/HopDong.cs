@@ -5,10 +5,10 @@ namespace Domain.Entities;
 
 public class HopDong : BaseEntity
 {
-    [Required]
-    public DateTime NgayBatDau { get; set; }
+    public Guid? KiotId { get; set; }
+    public Guid? ThuongNhanId { get; set; }
 
-    [Required]
+    public DateTime NgayBatDau { get; set; }
     public DateTime NgayKetThuc { get; set; }
 
     [Column(TypeName = "decimal(18,2)")]
@@ -20,4 +20,7 @@ public class HopDong : BaseEntity
     [Required]
     [MaxLength(50)]
     public string TrangThai { get; set; } = string.Empty;
+
+    [MaxLength(2000)]
+    public string? GhiChu { get; set; }
 }

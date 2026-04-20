@@ -3641,11 +3641,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nakamurahikari/market_api/Infrastructure/Infrastructure.csproj",
-      "projectName": "Infrastructure",
-      "projectPath": "/Users/nakamurahikari/market_api/Infrastructure/Infrastructure.csproj",
+      "projectUniqueName": "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj",
+      "projectName": "infrastructure",
+      "projectPath": "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj",
       "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
-      "outputPath": "/Users/nakamurahikari/market_api/Infrastructure/obj/",
+      "outputPath": "/Users/nakamurahikari/market_api/infrastructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"
@@ -3723,5 +3723,17 @@
         "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.125/libexec/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MailKit' 4.14.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-9j88-vvj5-vhgr",
+      "libraryId": "MailKit",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
