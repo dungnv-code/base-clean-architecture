@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nakamurahikari/market_api/Api/Api.csproj": {}
+    "/Users/nakamurahikari/market_api/api/api.csproj": {}
   },
   "projects": {
-    "/Users/nakamurahikari/market_api/Api/Api.csproj": {
+    "/Users/nakamurahikari/market_api/api/api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nakamurahikari/market_api/Api/Api.csproj",
-        "projectName": "Api",
-        "projectPath": "/Users/nakamurahikari/market_api/Api/Api.csproj",
+        "projectUniqueName": "/Users/nakamurahikari/market_api/api/api.csproj",
+        "projectName": "api",
+        "projectPath": "/Users/nakamurahikari/market_api/api/api.csproj",
         "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
-        "outputPath": "/Users/nakamurahikari/market_api/Api/obj/",
+        "outputPath": "/Users/nakamurahikari/market_api/api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj": {
-                "projectPath": "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj"
+              "/Users/nakamurahikari/market_api/Infrastructure/Infrastructure.csproj": {
+                "projectPath": "/Users/nakamurahikari/market_api/Infrastructure/Infrastructure.csproj"
               }
             }
           }
@@ -258,14 +258,14 @@
         }
       }
     },
-    "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj": {
+    "/Users/nakamurahikari/market_api/Infrastructure/Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj",
-        "projectName": "infrastructure",
-        "projectPath": "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj",
+        "projectUniqueName": "/Users/nakamurahikari/market_api/Infrastructure/Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "/Users/nakamurahikari/market_api/Infrastructure/Infrastructure.csproj",
         "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
-        "outputPath": "/Users/nakamurahikari/market_api/infrastructure/obj/",
+        "outputPath": "/Users/nakamurahikari/market_api/Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"

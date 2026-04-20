@@ -3641,11 +3641,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj",
-      "projectName": "infrastructure",
-      "projectPath": "/Users/nakamurahikari/market_api/infrastructure/infrastructure.csproj",
+      "projectUniqueName": "/Users/nakamurahikari/market_api/Infrastructure/Infrastructure.csproj",
+      "projectName": "Infrastructure",
+      "projectPath": "/Users/nakamurahikari/market_api/Infrastructure/Infrastructure.csproj",
       "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
-      "outputPath": "/Users/nakamurahikari/market_api/infrastructure/obj/",
+      "outputPath": "/Users/nakamurahikari/market_api/Infrastructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"
