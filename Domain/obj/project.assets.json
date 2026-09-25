@@ -759,19 +759,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/nakamurahikari/.nuget/packages/": {}
+    "C:\\Users\\dungnv\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nakamurahikari/market_api/Domain/Domain.csproj",
-      "projectName": "Domain",
-      "projectPath": "/Users/nakamurahikari/market_api/Domain/Domain.csproj",
-      "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
-      "outputPath": "/Users/nakamurahikari/market_api/Domain/obj/",
+      "projectUniqueName": "D:\\.net core web api\\clean architecture\\domain\\domain.csproj",
+      "projectName": "domain",
+      "projectPath": "D:\\.net core web api\\clean architecture\\domain\\domain.csproj",
+      "packagesPath": "C:\\Users\\dungnv\\.nuget\\packages\\",
+      "outputPath": "D:\\.net core web api\\clean architecture\\domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\dungnv\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -789,6 +789,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -820,7 +825,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.125/libexec/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.425/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -3,19 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\domain\domain.csproj" />
   </ItemGroup>
-	
-	<ItemGroup>
-		<None Update="EmailTemplates\**\*">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="Configs\**\*">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="Resources\**\*">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-	</ItemGroup>
-	
+
   <ItemGroup>
     <PackageReference Include="microsoft.entityframeworkcore" Version="8.0.20" />
     <PackageReference Include="microsoft.extensions.caching.memory" Version="8.0.1" />

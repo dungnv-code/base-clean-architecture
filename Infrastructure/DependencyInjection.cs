@@ -1,8 +1,6 @@
 #nullable disable
 
-using Application.DTOs.Kafka;
 using Application.IRepositories;
-using Infrastructure.ExternalServices.Kafka;
 using Infrastructure.Persistence;
 using Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -23,25 +21,11 @@ public static class DependencyInjection
                 configuration.GetConnectionString("DefaultConnection"),
                 b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)));
 
-        // Generic repository (dùng cho ChiTietHoaDon và các entity không có typed repo)
+        // Generic repository
         services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
         // Typed repositories
         services.AddScoped<IChoRepository, ChoRepository>();
-        services.AddScoped<IKhuVucRepository, KhuVucRepository>();
-        services.AddScoped<IKiotRepository, KiotRepository>();
-        services.AddScoped<IThuongNhanRepository, ThuongNhanRepository>();
-        services.AddScoped<IHopDongRepository, HopDongRepository>();
-        services.AddScoped<IHoaDonRepository, HoaDonRepository>();
-        services.AddScoped<IThanhToanRepository, ThanhToanRepository>();
-        services.AddScoped<ITaiSanRepository, TaiSanRepository>();
-        services.AddScoped<ISuCoRepository, SuCoRepository>();
-        services.AddScoped<INguoiDungRepository, NguoiDungRepository>();
-        services.AddScoped<ILichKiemTraRepository, LichKiemTraRepository>();
-
-        // Kafka
-        services.AddSingleton<AppSettings>();
-        services.AddSingleton<IProducerHandler<AuditLogDTO>, AuditLogProducerHandler>();
 
         // Application services
         services.AddApplication();

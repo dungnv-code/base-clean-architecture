@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nakamurahikari/market_api/application/application.csproj": {}
+    "D:\\.net core web api\\clean architecture\\application\\application.csproj": {}
   },
   "projects": {
-    "/Users/nakamurahikari/market_api/application/application.csproj": {
+    "D:\\.net core web api\\clean architecture\\application\\application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nakamurahikari/market_api/application/application.csproj",
+        "projectUniqueName": "D:\\.net core web api\\clean architecture\\application\\application.csproj",
         "projectName": "application",
-        "projectPath": "/Users/nakamurahikari/market_api/application/application.csproj",
-        "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
-        "outputPath": "/Users/nakamurahikari/market_api/application/obj/",
+        "projectPath": "D:\\.net core web api\\clean architecture\\application\\application.csproj",
+        "packagesPath": "C:\\Users\\dungnv\\.nuget\\packages\\",
+        "outputPath": "D:\\.net core web api\\clean architecture\\application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\dungnv\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/nakamurahikari/market_api/domain/domain.csproj": {
-                "projectPath": "/Users/nakamurahikari/market_api/domain/domain.csproj"
+              "D:\\.net core web api\\clean architecture\\domain\\domain.csproj": {
+                "projectPath": "D:\\.net core web api\\clean architecture\\domain\\domain.csproj"
               }
             }
           }
@@ -36,6 +36,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -91,21 +96,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.125/libexec/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.425/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/nakamurahikari/market_api/domain/domain.csproj": {
+    "D:\\.net core web api\\clean architecture\\domain\\domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nakamurahikari/market_api/domain/domain.csproj",
+        "projectUniqueName": "D:\\.net core web api\\clean architecture\\domain\\domain.csproj",
         "projectName": "domain",
-        "projectPath": "/Users/nakamurahikari/market_api/domain/domain.csproj",
-        "packagesPath": "/Users/nakamurahikari/.nuget/packages/",
-        "outputPath": "/Users/nakamurahikari/market_api/domain/obj/",
+        "projectPath": "D:\\.net core web api\\clean architecture\\domain\\domain.csproj",
+        "packagesPath": "C:\\Users\\dungnv\\.nuget\\packages\\",
+        "outputPath": "D:\\.net core web api\\clean architecture\\domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/nakamurahikari/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\dungnv\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -123,6 +128,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -154,7 +164,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.125/libexec/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.425/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
