@@ -1,7 +1,7 @@
 #nullable disable
 
 using Application.Common;
-using Application.DTOs.Cho;
+using Application.DTOs.User;
 using Application.IRepositories;
 using Domain.Entities;
 using Infrastructure.Persistence;
@@ -9,16 +9,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories;
 
-public class ChoRepository : Repository<Cho>, IChoRepository
+public class UserRepository : Repository<User>, IUserRepository
 {
-    public ChoRepository(AppDbContext context) : base(context) { }
+    public UserRepository(AppDbContext context) : base(context) { }
 
-    public async Task<PagedResult<Cho>> GetListAsync(ChoQueryDTO query)
+    public async Task<PagedResult<User>> GetListAsync(UserQueryDTO query)
     {
         var q = _dbSet.AsNoTracking();
 
         if (!string.IsNullOrWhiteSpace(query.Keyword))
-            q = q.Where(x => x.Ten.Contains(query.Keyword) || x.DiaChi.Contains(query.Keyword));
+            q = q.Where(x => x.Ten.Contains(query.Keyword) || x.Email.Contains(query.Keyword) || x.SoDienThoai.Contains(query.Keyword));
 
         var total = await q.CountAsync();
         var items = await q
@@ -27,6 +27,6 @@ public class ChoRepository : Repository<Cho>, IChoRepository
             .Take(query.IsGetAll ? int.MaxValue : query.PageSize)
             .ToListAsync();
 
-        return new PagedResult<Cho>(items, total);
+        return new PagedResult<User>(items, total);
     }
 }

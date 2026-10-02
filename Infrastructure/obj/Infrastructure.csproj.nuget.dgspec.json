@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.net core web api\\clean architecture\\infrastructure\\infrastructure.csproj": {}
+    "D:\\.net core web api\\clean architecture\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
     "D:\\.net core web api\\clean architecture\\application\\application.csproj": {
@@ -168,14 +168,14 @@
         }
       }
     },
-    "D:\\.net core web api\\clean architecture\\infrastructure\\infrastructure.csproj": {
+    "D:\\.net core web api\\clean architecture\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.net core web api\\clean architecture\\infrastructure\\infrastructure.csproj",
-        "projectName": "infrastructure",
-        "projectPath": "D:\\.net core web api\\clean architecture\\infrastructure\\infrastructure.csproj",
+        "projectUniqueName": "D:\\.net core web api\\clean architecture\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "D:\\.net core web api\\clean architecture\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\dungnv\\.nuget\\packages\\",
-        "outputPath": "D:\\.net core web api\\clean architecture\\infrastructure\\obj\\",
+        "outputPath": "D:\\.net core web api\\clean architecture\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dungnv\\AppData\\Roaming\\NuGet\\NuGet.Config"

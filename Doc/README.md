@@ -1,6 +1,6 @@
-# Market Management API — Tài liệu dự án
+# User Management API — Tài liệu dự án
 
-Clean Architecture (.NET 8) — API quản lý chợ.
+Clean Architecture (.NET 8) — API quản lý người dùng.
 
 ## 1. Cấu trúc dự án
 
@@ -129,19 +129,15 @@ dotnet ef migrations remove --project Infrastructure --startup-project Api
 dotnet ef database update TenMigrationCu --project Infrastructure --startup-project Api
 ```
 
-### 5.4. Migration rỗng
+### 5.4. Migration gốc duy nhất
 
-Thực tế hiện tại có 2 migration:
-- `InitialCreate` — tạo bảng `Cho` (chứa code thật).
-- `initDb` — **rỗng** (được `migrations add` khi bảng đã tồn tại nên không sinh thêm gì).
+Hiện tại chỉ có 1 migration: `InitialCreate` — tạo bảng `Users` (chứa code thật).
 
-Nên quản lý gọn lại: nếu mới bắt đầu, có thể xóa hết migrations cũ + drop DB rồi tạo lại 1 migration gốc duy nhất:
+Nếu đã có DB cũ chứa bảng `Cho` từ lần đổi mẫu CRUD, cần dọn lại trước khi áp migration:
 
 ```bash
-# (cân nhắc kỹ — sẽ mất lịch sử migrations)
 dotnet ef database update 0 --project Infrastructure --startup-project Api
 dotnet ef migrations remove --project Infrastructure --startup-project Api
-# xóa tiếp các migration khác nếu còn
 ```
 
 ### 5.5. Không commit bí mật

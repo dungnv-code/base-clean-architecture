@@ -3,7 +3,7 @@ stages:
   - deploy
 
 variables:
-  DOCKER_IMAGE: "marketapp-api"
+  DOCKER_IMAGE: "userapp-api"
 
 workflow:
   rules:

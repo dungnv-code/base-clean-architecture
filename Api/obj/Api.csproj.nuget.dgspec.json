@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.net core web api\\clean architecture\\Api\\Api.csproj": {}
+    "D:\\.net core web api\\clean architecture\\api\\Api.csproj": {}
   },
   "projects": {
-    "D:\\.net core web api\\clean architecture\\Api\\Api.csproj": {
+    "D:\\.net core web api\\clean architecture\\api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.net core web api\\clean architecture\\Api\\Api.csproj",
+        "projectUniqueName": "D:\\.net core web api\\clean architecture\\api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "D:\\.net core web api\\clean architecture\\Api\\Api.csproj",
+        "projectPath": "D:\\.net core web api\\clean architecture\\api\\Api.csproj",
         "packagesPath": "C:\\Users\\dungnv\\.nuget\\packages\\",
-        "outputPath": "D:\\.net core web api\\clean architecture\\Api\\obj\\",
+        "outputPath": "D:\\.net core web api\\clean architecture\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dungnv\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\.net core web api\\clean architecture\\infrastructure\\infrastructure.csproj": {
-                "projectPath": "D:\\.net core web api\\clean architecture\\infrastructure\\infrastructure.csproj"
+              "D:\\.net core web api\\clean architecture\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\.net core web api\\clean architecture\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -273,14 +273,14 @@
         }
       }
     },
-    "D:\\.net core web api\\clean architecture\\infrastructure\\infrastructure.csproj": {
+    "D:\\.net core web api\\clean architecture\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.net core web api\\clean architecture\\infrastructure\\infrastructure.csproj",
-        "projectName": "infrastructure",
-        "projectPath": "D:\\.net core web api\\clean architecture\\infrastructure\\infrastructure.csproj",
+        "projectUniqueName": "D:\\.net core web api\\clean architecture\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "D:\\.net core web api\\clean architecture\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\dungnv\\.nuget\\packages\\",
-        "outputPath": "D:\\.net core web api\\clean architecture\\infrastructure\\obj\\",
+        "outputPath": "D:\\.net core web api\\clean architecture\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dungnv\\AppData\\Roaming\\NuGet\\NuGet.Config"

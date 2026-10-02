@@ -1,4 +1,4 @@
-# Market_API
+# User_API
 
 
 
@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin http://gitlab.zamiga.org/zmg-dev-training/market_api.git
+git remote add origin http://gitlab.zamiga.org/zmg-dev-training/user_api.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](http://gitlab.zamiga.org/zmg-dev-training/market_api/-/settings/integrations)
+- [ ] [Set up project integrations](http://gitlab.zamiga.org/zmg-dev-training/user_api/-/settings/integrations)
 
 ## Collaborate with your team
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lRq+XSzdvb0=",
+  "dgSpecHash": "9RXDGhsMKZQ=",
   "success": true,
-  "projectFilePath": "D:\\.net core web api\\clean architecture\\Api\\Api.csproj",
+  "projectFilePath": "D:\\.net core web api\\clean architecture\\api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dungnv\\.nuget\\packages\\azure.core\\1.41.0\\azure.core.1.41.0.nupkg.sha512",
     "C:\\Users\\dungnv\\.nuget\\packages\\azure.identity\\1.12.1\\azure.identity.1.12.1.nupkg.sha512",

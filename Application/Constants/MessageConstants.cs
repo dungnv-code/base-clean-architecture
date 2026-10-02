@@ -11,9 +11,10 @@ public static class CommonMessage
     public const string ALREADY_EXISTS = "Common_503";         // 503 - Dữ liệu đã tồn tại
 }
 
-public static class ChoMessage
+public static class UserMessage
 {
-    public const string NOT_FOUND = "Cho_404";
-    public const string TEN_REQUIRED = "Cho_001";
-    public const string DIA_CHI_REQUIRED = "Cho_002";
+    public const string NOT_FOUND = "User_404";
+    public const string TEN_REQUIRED = "User_001";
+    public const string EMAIL_REQUIRED = "User_002";
+    public const string SO_DIEN_THAI_REQUIRED = "User_003";
 }

@@ -10,7 +10,7 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
-        services.AddScoped<IChoService, ChoService>();
+        services.AddScoped<IUserService, UserService>();
 
         return services;
     }

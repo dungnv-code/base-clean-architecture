@@ -9,9 +9,9 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new()
     {
-        Title = "Market Management API",
+        Title = "User Management API",
         Version = "v1",
-        Description = "API hệ thống quản lý chợ — Market Management System"
+        Description = "API hệ thống quản lý người dùng — User Management System"
     });
 
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -32,7 +32,7 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Market API v1");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "User API v1");
     c.RoutePrefix = "swagger";
 });
 
