@@ -764,11 +764,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\.net core web api\\clean architecture\\domain\\domain.csproj",
+      "projectUniqueName": "D:\\.net core web api\\highSchools\\domain\\domain.csproj",
       "projectName": "domain",
-      "projectPath": "D:\\.net core web api\\clean architecture\\domain\\domain.csproj",
+      "projectPath": "D:\\.net core web api\\highSchools\\domain\\domain.csproj",
       "packagesPath": "C:\\Users\\dungnv\\.nuget\\packages\\",
-      "outputPath": "D:\\.net core web api\\clean architecture\\domain\\obj\\",
+      "outputPath": "D:\\.net core web api\\highSchools\\domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dungnv\\AppData\\Roaming\\NuGet\\NuGet.Config"

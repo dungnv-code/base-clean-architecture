@@ -14,7 +14,9 @@ public static class CommonMessage
 public static class UserMessage
 {
     public const string NOT_FOUND = "User_404";
-    public const string TEN_REQUIRED = "User_001";
+    public const string NAME_REQUIRED = "User_001";
     public const string EMAIL_REQUIRED = "User_002";
-    public const string SO_DIEN_THAI_REQUIRED = "User_003";
+    public const string PHONE_NUMBER_REQUIRED = "User_003";
+    public const string ADDRESS_REQUIRED = "User_004";
+    public const string AVATAR_REQUIRED = "User_005";
 }

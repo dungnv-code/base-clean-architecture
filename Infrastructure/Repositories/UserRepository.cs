@@ -18,7 +18,7 @@ public class UserRepository : Repository<User>, IUserRepository
         var q = _dbSet.AsNoTracking();
 
         if (!string.IsNullOrWhiteSpace(query.Keyword))
-            q = q.Where(x => x.Ten.Contains(query.Keyword) || x.Email.Contains(query.Keyword) || x.SoDienThoai.Contains(query.Keyword));
+            q = q.Where(x => x.Name.Contains(query.Keyword) || x.Email.Contains(query.Keyword) || x.PhoneNumber.Contains(query.Keyword));
 
         var total = await q.CountAsync();
         var items = await q

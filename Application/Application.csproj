@@ -7,8 +7,9 @@
   <ItemGroup>
     <PackageReference Include="microsoft.entityframeworkcore" Version="8.0.20" />
     <PackageReference Include="microsoft.extensions.caching.memory" Version="8.0.1" />
-    <PackageReference Include="microsoft.extensions.configuration" Version="8.0.0" />
-    <PackageReference Include="microsoft.extensions.configuration.binder" Version="8.0.2" />
+    <PackageReference Include="microsoft.extensions.configuration" Version="10.0.12" />
+    <PackageReference Include="microsoft.extensions.configuration.binder" Version="10.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="10.0.12" />
     <PackageReference Include="newtonsoft.json" Version="13.0.4" />
     <PackageReference Include="npgsql.entityframeworkcore.postgresql" Version="8.0.11" />
     <PackageReference Include="serilog" Version="4.2.0" />

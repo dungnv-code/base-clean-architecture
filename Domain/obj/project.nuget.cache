@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SOsBuo4U69U=",
+  "dgSpecHash": "k3DofmWNgUs=",
   "success": true,
-  "projectFilePath": "D:\\.net core web api\\clean architecture\\domain\\domain.csproj",
+  "projectFilePath": "D:\\.net core web api\\highSchools\\domain\\domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dungnv\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.11\\microsoft.entityframeworkcore.8.0.11.nupkg.sha512",
     "C:\\Users\\dungnv\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.11\\microsoft.entityframeworkcore.abstractions.8.0.11.nupkg.sha512",

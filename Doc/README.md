@@ -129,7 +129,17 @@ dotnet ef migrations remove --project Infrastructure --startup-project Api
 dotnet ef database update TenMigrationCu --project Infrastructure --startup-project Api
 ```
 
-### 5.4. Migration gốc duy nhất
+### 5.4. Xóa toàn bộ database
+
+Xóa hẳn DB `Demo` (cảnh báo: mất toàn bộ dữ liệu):
+
+```bash
+dotnet ef database drop --project Infrastructure --startup-project Api
+```
+
+EF sẽ hỏi xác nhận trước khi xóa. Sau khi drop, chạy lại `dotnet ef database update` để tạo DB mới từ migrations.
+
+### 5.5. Migration gốc duy nhất
 
 Hiện tại chỉ có 1 migration: `InitialCreate` — tạo bảng `Users` (chứa code thật).
 
@@ -140,7 +150,7 @@ dotnet ef database update 0 --project Infrastructure --startup-project Api
 dotnet ef migrations remove --project Infrastructure --startup-project Api
 ```
 
-### 5.5. Không commit bí mật
+### 5.6. Không commit bí mật
 
 Connection string có chứa mật khẩu (như chuỗi PostgreSQL cũ) thì **không** nên commit lên git. Nên dùng `appsettings.Development.json` cho máy local, hoặc biến môi trường / User Secrets:
 
@@ -149,7 +159,7 @@ dotnet user-secrets init --project Api
 dotnet user-secrets set "ConnectionStrings:DefaultConnection" "Connection String ..."
 ```
 
-### 5.6. Bảo mật API
+### 5.7. Bảo mật API
 
 Hiện tại `/health` và Swagger mở cho mọi phương thức qua CORS (`AllowAnyOrigin`). Chưa có xác thực (JWT). Khi thêm bảo mật, cần đóng lại `AllowAnyOrigin`.
 
@@ -173,5 +183,6 @@ dotnet ef migrations add TenMigration --project Infrastructure --startup-project
 dotnet ef database update --project Infrastructure --startup-project Api
 dotnet ef migrations list --project Infrastructure --startup-project Api
 dotnet ef migrations remove --project Infrastructure --startup-project Api
+dotnet ef database drop --project Infrastructure --startup-project Api
 dotnet ef --version
 ```

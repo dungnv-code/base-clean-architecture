@@ -7,6 +7,7 @@ using Application.DTOs.EForm;
 using Application.IRepositories;
 using Application.IServices;
 using Domain.Entities;
+using Application.Helpers;
 
 namespace Application.Services;
 
@@ -38,16 +39,17 @@ public class UserService : IUserService
     public async Task<TResponse<UserResponseDTO>> CreateAsync(UserRequestDTO request)
     {
         var error = Validate(request);
+        var pwHash= HashPass.HashPassword(request.Password.Trim());
         if (error != null) return TResponse<UserResponseDTO>.FailResponse(error);
         try
         {
-            var entity = new User { Ten = request.Ten.Trim(), Email = request.Email.Trim(), SoDienThoai = request.SoDienThoai.Trim() };
+            var entity = new User { Name = request.Name.Trim(), Email = request.Email.Trim(), PhoneNumber = request.PhoneNumber.Trim(), Address = request.Address.Trim(), Avatar = request.Avatar.Trim(), Password = pwHash.Trim() };
             return TResponse<UserResponseDTO>.SuccessResponse(Map(await _repo.CreateAsync(entity)));
         }
         catch { return TResponse<UserResponseDTO>.FailResponse(CommonMessage.INTERNAL_SERVER_ERROR, 500); }
     }
 
-    public async Task<TResponse<UserResponseDTO>> UpdateAsync(Guid id, UserRequestDTO request)
+    public async Task<TResponse<UserResponseDTO>> UpdateAsync(Guid id, UserUpdateRequestDTO request)
     {
         var error = Validate(request);
         if (error != null) return TResponse<UserResponseDTO>.FailResponse(error);
@@ -55,9 +57,11 @@ public class UserService : IUserService
         if (entity == null) return TResponse<UserResponseDTO>.FailResponse(UserMessage.NOT_FOUND, 404);
         try
         {
-            entity.Ten = request.Ten.Trim();
+            entity.Name = request.Name.Trim();
             entity.Email = request.Email.Trim();
-            entity.SoDienThoai = request.SoDienThoai.Trim();
+            entity.PhoneNumber = request.PhoneNumber.Trim();
+            entity.Address = request.Address.Trim();
+            entity.Avatar = request.Avatar.Trim();
             return TResponse<UserResponseDTO>.SuccessResponse(Map(await _repo.UpdateAsync(entity)));
         }
         catch { return TResponse<UserResponseDTO>.FailResponse(CommonMessage.INTERNAL_SERVER_ERROR, 500); }
@@ -71,12 +75,16 @@ public class UserService : IUserService
 
     private static string Validate(UserRequestDTO r)
     {
-        if (string.IsNullOrWhiteSpace(r.Ten)) return UserMessage.TEN_REQUIRED;
+        if (string.IsNullOrWhiteSpace(r.Name)) return UserMessage.NAME_REQUIRED;
         if (string.IsNullOrWhiteSpace(r.Email)) return UserMessage.EMAIL_REQUIRED;
-        if (string.IsNullOrWhiteSpace(r.SoDienThoai)) return UserMessage.SO_DIEN_THAI_REQUIRED;
+        if (string.IsNullOrWhiteSpace(r.PhoneNumber)) return UserMessage.PHONE_NUMBER_REQUIRED;
+        if (string.IsNullOrWhiteSpace(r.Address)) return UserMessage.ADDRESS_REQUIRED;
+        if (string.IsNullOrWhiteSpace(r.Avatar)) return UserMessage.AVATAR_REQUIRED;
         return null;
     }
 
     private static UserResponseDTO Map(User e) => new()
-        { Id = e.Id, Ten = e.Ten, Email = e.Email, SoDienThoai = e.SoDienThoai, CreatedAt = e.CreatedAt, UpdatedAt = e.UpdatedAt };
+        { Id = e.Id, Name = e.Name, Email = e.Email, PhoneNumber = e.PhoneNumber, Address = e.Address, Avatar = e.Avatar, CreatedAt = e.CreatedAt, UpdatedAt = e.UpdatedAt };
+    
+   
 }

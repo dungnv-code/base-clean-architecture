@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.net core web api\\clean architecture\\application\\application.csproj": {}
+    "D:\\.net core web api\\highSchools\\application\\application.csproj": {}
   },
   "projects": {
-    "D:\\.net core web api\\clean architecture\\application\\application.csproj": {
+    "D:\\.net core web api\\highSchools\\application\\application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.net core web api\\clean architecture\\application\\application.csproj",
+        "projectUniqueName": "D:\\.net core web api\\highSchools\\application\\application.csproj",
         "projectName": "application",
-        "projectPath": "D:\\.net core web api\\clean architecture\\application\\application.csproj",
+        "projectPath": "D:\\.net core web api\\highSchools\\application\\application.csproj",
         "packagesPath": "C:\\Users\\dungnv\\.nuget\\packages\\",
-        "outputPath": "D:\\.net core web api\\clean architecture\\application\\obj\\",
+        "outputPath": "D:\\.net core web api\\highSchools\\application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dungnv\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\.net core web api\\clean architecture\\domain\\domain.csproj": {
-                "projectPath": "D:\\.net core web api\\clean architecture\\domain\\domain.csproj"
+              "D:\\.net core web api\\highSchools\\domain\\domain.csproj": {
+                "projectPath": "D:\\.net core web api\\highSchools\\domain\\domain.csproj"
               }
             }
           }
@@ -47,6 +47,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[10.0.12, )"
+            },
             "microsoft.entityframeworkcore": {
               "target": "Package",
               "version": "[8.0.20, )"
@@ -57,11 +61,11 @@
             },
             "microsoft.extensions.configuration": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[10.0.12, )"
             },
             "microsoft.extensions.configuration.binder": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[10.0.12, )"
             },
             "newtonsoft.json": {
               "target": "Package",
@@ -100,14 +104,14 @@
         }
       }
     },
-    "D:\\.net core web api\\clean architecture\\domain\\domain.csproj": {
+    "D:\\.net core web api\\highSchools\\domain\\domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.net core web api\\clean architecture\\domain\\domain.csproj",
+        "projectUniqueName": "D:\\.net core web api\\highSchools\\domain\\domain.csproj",
         "projectName": "domain",
-        "projectPath": "D:\\.net core web api\\clean architecture\\domain\\domain.csproj",
+        "projectPath": "D:\\.net core web api\\highSchools\\domain\\domain.csproj",
         "packagesPath": "C:\\Users\\dungnv\\.nuget\\packages\\",
-        "outputPath": "D:\\.net core web api\\clean architecture\\domain\\obj\\",
+        "outputPath": "D:\\.net core web api\\highSchools\\domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dungnv\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -27,7 +27,7 @@ public class UserController : BaseController
 
     /// <summary>Cập nhật thông tin người dùng</summary>
     [HttpPut("{id:guid}")]
-    public async Task<IActionResult> Update(Guid id, [FromBody] UserRequestDTO request) =>
+    public async Task<IActionResult> Update(Guid id, [FromBody] UserUpdateRequestDTO request) =>
         Ok(await _service.UpdateAsync(id, request));
 
     /// <summary>Xóa người dùng</summary>
