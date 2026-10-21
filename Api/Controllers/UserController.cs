@@ -34,4 +34,8 @@ public class UserController : BaseController
     [HttpDelete("{id:guid}")]
     public async Task<IActionResult> Delete(Guid id) =>
         Ok(await _service.DeleteAsync(id));
+    
+    [HttpPost("login")]
+    public async Task<IActionResult> Login([FromBody] UserLoginDTO request)=> 
+        Ok(await _service.LoginAsync(request));
 }

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "SMxVUY3JC0k=",
+  "dgSpecHash": "iZ3rixOhncI=",
   "success": true,
   "projectFilePath": "D:\\.net core web api\\highSchools\\Api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dungnv\\.nuget\\packages\\azure.core\\1.41.0\\azure.core.1.41.0.nupkg.sha512",
     "C:\\Users\\dungnv\\.nuget\\packages\\azure.identity\\1.12.1\\azure.identity.1.12.1.nupkg.sha512",
+    "C:\\Users\\dungnv\\.nuget\\packages\\dotnetenv\\3.2.0\\dotnetenv.3.2.0.nupkg.sha512",
     "C:\\Users\\dungnv\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\dungnv\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.22\\microsoft.aspnetcore.authentication.jwtbearer.8.0.22.nupkg.sha512",
     "C:\\Users\\dungnv\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\10.0.12\\microsoft.aspnetcore.cryptography.internal.10.0.12.nupkg.sha512",
@@ -68,6 +69,7 @@
     "C:\\Users\\dungnv\\.nuget\\packages\\serilog.sinks.console\\6.0.1-dev-00953\\serilog.sinks.console.6.0.1-dev-00953.nupkg.sha512",
     "C:\\Users\\dungnv\\.nuget\\packages\\serilog.sinks.debug\\2.0.0\\serilog.sinks.debug.2.0.0.nupkg.sha512",
     "C:\\Users\\dungnv\\.nuget\\packages\\serilog.sinks.file\\7.0.0\\serilog.sinks.file.7.0.0.nupkg.sha512",
+    "C:\\Users\\dungnv\\.nuget\\packages\\superpower\\3.0.0\\superpower.3.0.0.nupkg.sha512",
     "C:\\Users\\dungnv\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\dungnv\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\dungnv\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

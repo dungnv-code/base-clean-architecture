@@ -12,5 +12,6 @@ public class User : BaseEntity
     public string? Avatar { get; set; }= string.Empty;
     public bool IsDeleted { get; set; } = false;
 
-    public ICollection<UserRoles> Roles { get; set; } = new List<UserRoles>();    
+    public ICollection<UserRole> Roles { get; set; } = new List<UserRole>();    
+    public ICollection<RefreshToken> RefreshTokens {get;set;}= new List<RefreshToken>();
 }

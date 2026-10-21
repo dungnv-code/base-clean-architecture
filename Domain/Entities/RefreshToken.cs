@@ -1,0 +1,16 @@
+
+namespace Domain.Entities
+{
+    public class RefreshToken:BaseEntity
+    {
+        public Guid UserId {get;set;}
+        public User User{get;set;}
+        public string Token {get;set;}
+        public DateTime ExpiresAt {get;set;}
+        public bool IsRevoked {get;set;}=false;
+        public bool IsUsed {get;set;}=false;
+        public DateTime? RevokedAt {get;set;}
+        public String? CreatedByIp {get;set;}
+        public bool IsActive => !IsRevoked && !IsUsed && DateTime.UtcNow < ExpiresAt;
+    }
+}

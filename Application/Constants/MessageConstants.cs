@@ -13,10 +13,11 @@ public static class CommonMessage
 
 public static class UserMessage
 {
-    public const string NOT_FOUND = "User_404";
-    public const string NAME_REQUIRED = "User_001";
-    public const string EMAIL_REQUIRED = "User_002";
-    public const string PHONE_NUMBER_REQUIRED = "User_003";
-    public const string ADDRESS_REQUIRED = "User_004";
-    public const string AVATAR_REQUIRED = "User_005";
+    public const string NOT_FOUND = "Không tìm thấy người dùng!";
+    public const string NAME_REQUIRED = "Tên ngươi dùng là bắt buộc!";
+    public const string EMAIL_REQUIRED = "Email là bắt buộc!";
+    public const string PHONE_NUMBER_REQUIRED = "Số điện thoại là bắt buộc!";
+    public const string ADDRESS_REQUIRED = "Địa chỉ là bắt buộc!";
+    public const string AVATAR_REQUIRED = "Avata là bắt buộc!";
+    public const string NOT_PASS = "Mật khẩu chưa chính xác!";
 }

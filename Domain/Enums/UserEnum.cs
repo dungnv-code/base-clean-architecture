@@ -1,6 +1,6 @@
 
 
-public enum UserRole
+public enum UserRoleEnum
 {
     Admin,
     SchoolAdmin,

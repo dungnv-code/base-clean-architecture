@@ -1,7 +1,12 @@
 using Infrastructure;
 using System.Reflection;
 
+using DotNetEnv;
+
+Env.Load();
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Configuration["Jwt:Secret"] = Environment.GetEnvironmentVariable("JWT_SECRET_KEY");
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

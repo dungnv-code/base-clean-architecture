@@ -29,4 +29,13 @@ public class UserRepository : Repository<User>, IUserRepository
 
         return new PagedResult<User>(items, total);
     }
+
+    public async Task<User> GetByEmailAsync(string email)
+    {
+        if (string.IsNullOrWhiteSpace(email))
+        {
+          return null;
+        }
+        return await _dbSet.AsNoTracking().FirstOrDefaultAsync(x=>x.Email==email);
+    }
 }

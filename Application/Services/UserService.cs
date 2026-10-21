@@ -73,18 +73,45 @@ public class UserService : IUserService
         return ok ? TResponse<bool>.SuccessResponse(true) : TResponse<bool>.FailResponse(UserMessage.NOT_FOUND, 404);
     }
 
-    private static string Validate(UserRequestDTO r)
+    public async Task<TResponse<UserLoginReponseDTO>> LoginAsync(UserLoginDTO request)
     {
-        if (string.IsNullOrWhiteSpace(r.Name)) return UserMessage.NAME_REQUIRED;
-        if (string.IsNullOrWhiteSpace(r.Email)) return UserMessage.EMAIL_REQUIRED;
-        if (string.IsNullOrWhiteSpace(r.PhoneNumber)) return UserMessage.PHONE_NUMBER_REQUIRED;
-        if (string.IsNullOrWhiteSpace(r.Address)) return UserMessage.ADDRESS_REQUIRED;
-        if (string.IsNullOrWhiteSpace(r.Avatar)) return UserMessage.AVATAR_REQUIRED;
+        if (string.IsNullOrWhiteSpace(request.Email))
+        {
+           return TResponse<UserLoginReponseDTO>.FailResponse(UserMessage.NOT_FOUND, 400);
+        }
+
+        if (string.IsNullOrWhiteSpace(request.Password))
+        {
+           return TResponse<UserLoginReponseDTO>.FailResponse("Thiếu mật khẩu!", 400);
+        }
+
+        var User = await _repo.GetByEmailAsync(request.Email);
+        if (User == null || User.IsDeleted) return TResponse<UserLoginReponseDTO>.FailResponse(UserMessage.NOT_FOUND, 401);
+
+        if (!HashPass.VerifyPassword(User.Password, request.Password))
+        {
+            return TResponse<UserLoginReponseDTO>.FailResponse(UserMessage.NOT_PASS,401);
+        }
+        
+        
+    }
+
+    private static string Validate(UserBaseDTO r)
+    {
+        var fields = new (string Value, string Message)[]
+        {
+            (r.Name, UserMessage.NAME_REQUIRED),
+            (r.Email, UserMessage.EMAIL_REQUIRED),
+            (r.PhoneNumber, UserMessage.PHONE_NUMBER_REQUIRED),
+            (r.Address, UserMessage.ADDRESS_REQUIRED),
+            (r.Avatar, UserMessage.AVATAR_REQUIRED),
+        };
+        foreach (var (value, message) in fields)
+            if (string.IsNullOrWhiteSpace(value)) return message;
         return null;
     }
 
     private static UserResponseDTO Map(User e) => new()
         { Id = e.Id, Name = e.Name, Email = e.Email, PhoneNumber = e.PhoneNumber, Address = e.Address, Avatar = e.Avatar, CreatedAt = e.CreatedAt, UpdatedAt = e.UpdatedAt };
     
-   
 }

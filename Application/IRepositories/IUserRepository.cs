@@ -9,4 +9,6 @@ namespace Application.IRepositories;
 public interface IUserRepository : IRepository<User>
 {
     Task<PagedResult<User>> GetListAsync(UserQueryDTO query);
+
+    Task<User> GetByEmailAsync(string email);
 }
