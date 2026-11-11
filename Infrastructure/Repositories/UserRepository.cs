@@ -34,8 +34,8 @@ public class UserRepository : Repository<User>, IUserRepository
     {
         if (string.IsNullOrWhiteSpace(email))
         {
-          return null;
+            return null;
         }
-        return await _dbSet.AsNoTracking().FirstOrDefaultAsync(x=>x.Email==email);
+        return await _dbSet.AsNoTracking().FirstOrDefaultAsync(x => x.Email == email);
     }
 }

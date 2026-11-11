@@ -1,13 +1,13 @@
 #nullable disable
 
 using Application.Constants;
-using Application.DTOs.User;
 using Application.DTOs.Common;
 using Application.DTOs.EForm;
+using Application.DTOs.User;
+using Application.Helpers;
 using Application.IRepositories;
 using Application.IServices;
 using Domain.Entities;
-using Application.Helpers;
 
 namespace Application.Services;
 
@@ -39,7 +39,7 @@ public class UserService : IUserService
     public async Task<TResponse<UserResponseDTO>> CreateAsync(UserRequestDTO request)
     {
         var error = Validate(request);
-        var pwHash= HashPass.HashPassword(request.Password.Trim());
+        var pwHash = HashPass.HashPassword(request.Password.Trim());
         if (error != null) return TResponse<UserResponseDTO>.FailResponse(error);
         try
         {
@@ -77,12 +77,12 @@ public class UserService : IUserService
     {
         if (string.IsNullOrWhiteSpace(request.Email))
         {
-           return TResponse<UserLoginReponseDTO>.FailResponse(UserMessage.NOT_FOUND, 400);
+            return TResponse<UserLoginReponseDTO>.FailResponse(UserMessage.NOT_FOUND, 400);
         }
 
         if (string.IsNullOrWhiteSpace(request.Password))
         {
-           return TResponse<UserLoginReponseDTO>.FailResponse("Thiếu mật khẩu!", 400);
+            return TResponse<UserLoginReponseDTO>.FailResponse("Thiếu mật khẩu!", 400);
         }
 
         var User = await _repo.GetByEmailAsync(request.Email);
@@ -90,10 +90,10 @@ public class UserService : IUserService
 
         if (!HashPass.VerifyPassword(User.Password, request.Password))
         {
-            return TResponse<UserLoginReponseDTO>.FailResponse(UserMessage.NOT_PASS,401);
+            return TResponse<UserLoginReponseDTO>.FailResponse(UserMessage.NOT_PASS, 401);
         }
-        
-        
+
+
     }
 
     private static string Validate(UserBaseDTO r)
@@ -112,6 +112,6 @@ public class UserService : IUserService
     }
 
     private static UserResponseDTO Map(User e) => new()
-        { Id = e.Id, Name = e.Name, Email = e.Email, PhoneNumber = e.PhoneNumber, Address = e.Address, Avatar = e.Avatar, CreatedAt = e.CreatedAt, UpdatedAt = e.UpdatedAt };
-    
+    { Id = e.Id, Name = e.Name, Email = e.Email, PhoneNumber = e.PhoneNumber, Address = e.Address, Avatar = e.Avatar, CreatedAt = e.CreatedAt, UpdatedAt = e.UpdatedAt };
+
 }

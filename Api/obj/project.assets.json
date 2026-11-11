@@ -1997,7 +1997,7 @@
           "bin/placeholder/domain.dll": {}
         }
       },
-      "infrastructure/1.0.0": {
+      "Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -2008,10 +2008,10 @@
           "npgsql.entityframeworkcore.postgresql": "8.0.11"
         },
         "compile": {
-          "bin/placeholder/infrastructure.dll": {}
+          "bin/placeholder/Infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/infrastructure.dll": {}
+          "bin/placeholder/Infrastructure.dll": {}
         }
       }
     }
@@ -5200,15 +5200,16 @@
       "path": "../domain/domain.csproj",
       "msbuildProject": "../domain/domain.csproj"
     },
-    "infrastructure/1.0.0": {
+    "Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../infrastructure/infrastructure.csproj",
-      "msbuildProject": "../infrastructure/infrastructure.csproj"
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "DotNetEnv >= 3.2.0",
+      "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.22",
       "Microsoft.AspNetCore.OpenApi >= 8.0.24",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.20",
@@ -5217,8 +5218,7 @@
       "Serilog.AspNetCore >= 8.0.3",
       "Serilog.Sinks.Console >= 6.0.1-dev-00953",
       "Serilog.Sinks.File >= 7.0.0",
-      "Swashbuckle.AspNetCore >= 6.4.0",
-      "infrastructure >= 1.0.0"
+      "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
   "packageFolders": {
@@ -5227,11 +5227,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\.net core web api\\highSchools\\Api\\Api.csproj",
+      "projectUniqueName": "D:\\.net core web api\\highSchools\\api\\Api.csproj",
       "projectName": "Api",
-      "projectPath": "D:\\.net core web api\\highSchools\\Api\\Api.csproj",
+      "projectPath": "D:\\.net core web api\\highSchools\\api\\Api.csproj",
       "packagesPath": "C:\\Users\\dungnv\\.nuget\\packages\\",
-      "outputPath": "D:\\.net core web api\\highSchools\\Api\\obj\\",
+      "outputPath": "D:\\.net core web api\\highSchools\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dungnv\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5246,8 +5246,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\.net core web api\\highSchools\\infrastructure\\infrastructure.csproj": {
-              "projectPath": "D:\\.net core web api\\highSchools\\infrastructure\\infrastructure.csproj"
+            "D:\\.net core web api\\highSchools\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\.net core web api\\highSchools\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

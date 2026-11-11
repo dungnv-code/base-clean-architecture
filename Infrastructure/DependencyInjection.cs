@@ -1,12 +1,12 @@
 #nullable disable
 
+using Application;
 using Application.IRepositories;
 using Infrastructure.Persistence;
 using Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Application;
 
 namespace Infrastructure;
 

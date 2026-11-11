@@ -1,7 +1,6 @@
-using Infrastructure;
 using System.Reflection;
-
 using DotNetEnv;
+using Infrastructure;
 
 Env.Load();
 

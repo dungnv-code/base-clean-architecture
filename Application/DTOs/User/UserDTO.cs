@@ -25,7 +25,7 @@ public class UserResponseDTO
     public string Name { get; set; }
     public string Email { get; set; }
     public string PhoneNumber { get; set; }
-    public string Address {get;set;}
+    public string Address { get; set; }
     public string Avatar { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
@@ -33,7 +33,7 @@ public class UserResponseDTO
 
 public class UserResponseFullDTO : UserResponseDTO
 {
-    public string Password {get;set;} 
+    public string Password { get; set; }
 }
 
 public class UserUpdateRequestDTO : UserBaseDTO
@@ -43,17 +43,17 @@ public class UserUpdateRequestDTO : UserBaseDTO
 
 public class UserLoginDTO
 {
-   public string Email {get;set;}
-   public string Password {get;set;}
+    public string Email { get; set; }
+    public string Password { get; set; }
 }
 
 public class UserLoginReponseDTO
 {
-    public string accessToken {get;set;} 
-    public Guid IdUser {get;set;} 
+    public string accessToken { get; set; }
+    public Guid IdUser { get; set; }
 }
 
 public class UserQueryDTO : BaseQueryDTO
 {
-    
+
 }

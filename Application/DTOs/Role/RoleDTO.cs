@@ -10,5 +10,5 @@ public class RoleDTO
 
 public class RoleQueryDTO : BaseQueryDTO
 {
-    
+
 }
