@@ -9,5 +9,4 @@ namespace Application.IRepositories;
 
 public interface IRoleRepository : IRepository<Role>
 {
-    // Task<RoleDTO> GetRolesByUserIdAsync(Guid IdUser);
 }

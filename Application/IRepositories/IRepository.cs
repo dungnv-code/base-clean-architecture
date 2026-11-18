@@ -13,4 +13,5 @@ public interface IRepository<T> where T : BaseEntity
     Task<T> UpdateAsync(T entity);
     Task<bool> DeleteAsync(Guid id);
     Task<bool> AnyAsync(Expression<Func<T, bool>> predicate);
+    Task<List<T>> GetListAsync(Expression<Func<T, bool>> predicate = null, int skip = 0, int take = 0, string orderBy = null, bool descending = true);
 }

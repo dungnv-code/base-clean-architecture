@@ -26,7 +26,7 @@ public static class DependencyInjection
 
         // Typed repositories
         services.AddScoped<IUserRepository, UserRepository>();
-
+        services.AddScoped<IUserRoleRepository,UserRoleRepository>();
         // Application services
         services.AddApplication();
 

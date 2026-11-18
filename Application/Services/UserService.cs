@@ -14,7 +14,16 @@ namespace Application.Services;
 public class UserService : IUserService
 {
     private readonly IUserRepository _repo;
-    public UserService(IUserRepository repo) => _repo = repo;
+    private readonly IUserRoleRepository _userRoleRepo;
+
+    private readonly IJwtTokenService _jwtTokenService;
+    private readonly IRepository<RefreshToken> _refreshTokenRepo;
+    public UserService(IUserRepository repo, IUserRoleRepository userRoleRepo, IJwtTokenService jwtTokenService, IRepository<RefreshToken> refreshTokenRepo){
+        _repo = repo;
+        _userRoleRepo = userRoleRepo;
+        _jwtTokenService=jwtTokenService;
+        _refreshTokenRepo=refreshTokenRepo;
+    }
 
     public async Task<TResponse<List<UserResponseDTO>>> GetListAsync(UserQueryDTO query)
     {
@@ -92,8 +101,17 @@ public class UserService : IUserService
         {
             return TResponse<UserLoginReponseDTO>.FailResponse(UserMessage.NOT_PASS, 401);
         }
-
-
+        var roles = await _userRoleRepo.GetRolesByUserIdAsync(User.Id);
+        var accessToken=  _jwtTokenService.GenerateAccessToken(User, roles.Select(r=>r.Code));
+        var refreshToken= _jwtTokenService.GenerateRefreshToken(User.Id, request.IpAddress);
+        await _refreshTokenRepo.CreateAsync(refreshToken);
+        var testrole=roles.Select(r=>r.Code);
+        Console.WriteLine($"Role: {string.Join(", ", testrole)}");
+        return TResponse<UserLoginReponseDTO>.SuccessResponse(new UserLoginReponseDTO
+        {
+            AccessToken = accessToken,
+            User = Map(User)
+        });
     }
 
     private static string Validate(UserBaseDTO r)

@@ -1,13 +1,19 @@
 using System.Reflection;
 using DotNetEnv;
 using Infrastructure;
-
+using Application.Services;
 Env.Load();
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration["Jwt:Secret"] = Environment.GetEnvironmentVariable("JWT_SECRET_KEY");
 
+builder.Services.AddOptions<JwtSettings>()
+    .Bind(builder.Configuration.GetSection(JwtSettings.SectionName))
+    .ValidateDataAnnotations()
+    .ValidateOnStart();
+
 builder.Services.AddControllers();
+builder.Services.AddSingleton<IJwtTokenService, JwtTokenService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {

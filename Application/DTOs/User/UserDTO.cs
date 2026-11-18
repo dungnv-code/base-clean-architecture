@@ -45,12 +45,13 @@ public class UserLoginDTO
 {
     public string Email { get; set; }
     public string Password { get; set; }
+    public string IpAddress { get; set; }
 }
 
 public class UserLoginReponseDTO
 {
-    public string accessToken { get; set; }
-    public Guid IdUser { get; set; }
+    public string AccessToken { get; set; }
+    public UserResponseDTO User { get; set; }
 }
 
 public class UserQueryDTO : BaseQueryDTO
