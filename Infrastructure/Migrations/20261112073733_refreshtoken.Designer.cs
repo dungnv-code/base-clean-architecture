@@ -13,7 +13,7 @@ namespace Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20261112073733_refreshtoken")]
-    partial class refreshtoken
+    partial class Refreshtoken
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

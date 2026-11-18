@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Infrastructure.Migrations
-{
+namespace Infrastructure.Migrations;
+
     /// <inheritdoc />
-    public partial class refreshtoken : Migration
+    public partial class Refreshtoken : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -107,4 +107,4 @@ namespace Infrastructure.Migrations
                 oldType: "nvarchar(450)");
         }
     }
-}
+
