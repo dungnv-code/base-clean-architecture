@@ -11,7 +11,7 @@ public static class HashPass
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(password);
 
-        return Hasher.HashPassword(null, password);
+        return Hasher.HashPassword(string.Empty, password);
     }
 
     public static bool VerifyPassword(
@@ -25,7 +25,7 @@ public static class HashPass
         }
 
         var result = Hasher.VerifyHashedPassword(
-            null,
+            string.Empty,
             hashedPassword,
             providedPassword);
 

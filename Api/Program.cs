@@ -2,6 +2,10 @@ using System.Reflection;
 using DotNetEnv;
 using Infrastructure;
 using Application.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Application.DTOs.EForm;
 Env.Load();
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +15,42 @@ builder.Services.AddOptions<JwtSettings>()
     .Bind(builder.Configuration.GetSection(JwtSettings.SectionName))
     .ValidateDataAnnotations()
     .ValidateOnStart();
+
+var jwt = builder.Configuration.GetSection(JwtSettings.SectionName).Get<JwtSettings>()!;
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(o =>
+    {
+        o.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = jwt.Issuer,
+            ValidAudience = jwt.Audience,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt.Secret)),
+            ClockSkew = TimeSpan.FromMinutes(1)
+        };
+        o.Events = new JwtBearerEvents
+        {
+            OnChallenge = ctx =>
+            {
+                ctx.HandleResponse();
+                ctx.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                return ctx.Response.WriteAsJsonAsync(
+                    TResponse.FailResponse(CommonMessage.UNAUTHORIZED, 401));
+            },
+            OnForbidden = ctx =>
+            {
+                ctx.Response.StatusCode = StatusCodes.Status403Forbidden;
+                return ctx.Response.WriteAsJsonAsync(
+                    TResponse.FailResponse(CommonMessage.ACCESS_DENIED, 403));
+            }
+        };
+    });
+
+builder.Services.AddAuthorization();
 
 builder.Services.AddControllers();
 builder.Services.AddSingleton<IJwtTokenService, JwtTokenService>();

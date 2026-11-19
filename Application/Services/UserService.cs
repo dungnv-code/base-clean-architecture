@@ -15,14 +15,15 @@ public class UserService : IUserService
 {
     private readonly IUserRepository _repo;
     private readonly IUserRoleRepository _userRoleRepo;
-
     private readonly IJwtTokenService _jwtTokenService;
     private readonly IRepository<RefreshToken> _refreshTokenRepo;
-    public UserService(IUserRepository repo, IUserRoleRepository userRoleRepo, IJwtTokenService jwtTokenService, IRepository<RefreshToken> refreshTokenRepo){
+    private readonly IRepository<UserRole> _userRoleRepository;
+    public UserService(IUserRepository repo, IUserRoleRepository userRoleRepo, IJwtTokenService jwtTokenService, IRepository<RefreshToken> refreshTokenRepo, IRepository<UserRole> userRoleRepository){
         _repo = repo;
         _userRoleRepo = userRoleRepo;
         _jwtTokenService=jwtTokenService;
         _refreshTokenRepo=refreshTokenRepo;
+        _userRoleRepository=userRoleRepository;
     }
 
     public async Task<TResponse<List<UserResponseDTO>>> GetListAsync(UserQueryDTO query)
@@ -53,7 +54,10 @@ public class UserService : IUserService
         try
         {
             var entity = new User { Name = request.Name.Trim(), Email = request.Email.Trim(), PhoneNumber = request.PhoneNumber.Trim(), Address = request.Address.Trim(), Avatar = request.Avatar.Trim(), Password = pwHash.Trim() };
-            return TResponse<UserResponseDTO>.SuccessResponse(Map(await _repo.CreateAsync(entity)));
+            var userRole= new UserRole { UserId=entity.Id, RoleId=Guid.Parse(request.IdRole) };
+            var newUser = await _repo.CreateAsync(entity);
+            await _userRoleRepository.CreateAsync(userRole);
+            return TResponse<UserResponseDTO>.SuccessResponse(Map(newUser));
         }
         catch { return TResponse<UserResponseDTO>.FailResponse(CommonMessage.INTERNAL_SERVER_ERROR, 500); }
     }

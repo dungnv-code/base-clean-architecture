@@ -17,6 +17,9 @@ public abstract class UserBaseDTO
 public class UserRequestDTO : UserBaseDTO
 {
     public string Password { get; set; }
+
+    public string IdRole { get; set; }
+    
 }
 
 public class UserResponseDTO
